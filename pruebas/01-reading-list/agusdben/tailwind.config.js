@@ -8,8 +8,14 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateRows: {
-        layout: 'auto minmax(640px, 1fr) auto'
+        layout: 'auto 1fr auto'
       },
+      gridTemplateColumns: {
+        books: 'repeat(auto-fill, minmax(100px, 150px))'
+      },
+      aspectRatio: {
+        book: '10/16'
+      }
     },
   },
   plugins: [],
