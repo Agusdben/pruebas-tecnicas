@@ -8,13 +8,13 @@ interface Props {
 
 const BookCard: React.FC<Props> = ({ book }) => {
   return (
-    <div>
+    <div className='group flex-1 flex flex-col gap-1 text-left'>
       <figure className='relative aspect-book w-full'>
         <Image
           fill
           sizes='100%'
           priority={true}
-          className='object-cover'
+          className='object-cover rounded-md group-hover:rotate-1 origin-top-left transition-transform duration-200'
           src={book.cover}
           alt={`${book.title} by ${book.author.name}`}
         />

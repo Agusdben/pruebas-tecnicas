@@ -1,5 +1,5 @@
 export const GENRES = {
-  all: 'all',
+  all: 'todos',
   Fantasía: 'Fantasía',
   'Ciencia ficción': 'Ciencia ficción',
   Zombies: 'Zombies',

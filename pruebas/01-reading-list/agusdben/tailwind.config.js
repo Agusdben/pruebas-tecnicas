@@ -11,10 +11,18 @@ module.exports = {
         layout: 'auto 1fr auto'
       },
       gridTemplateColumns: {
-        books: 'repeat(auto-fill, minmax(100px, 150px))'
+        books: 'repeat(auto-fill, minmax(100px, 180px))'
       },
       aspectRatio: {
         book: '10/16'
+      },
+      colors: {
+        'background-start': '#213f',
+        'background-via': '#204f',
+        'background-end': '#223f',
+        black: '#1f1f1f',
+        white: '#f3f3f3',
+        primary: '#f17d'
       }
     },
   },

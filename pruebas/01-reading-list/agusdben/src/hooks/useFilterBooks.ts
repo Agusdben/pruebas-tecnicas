@@ -8,6 +8,7 @@ const useFilterBooks = () => {
   const updateFilters = (filters: BookFilter) => {
     setFilters(filters)
   }
+
   return {
     filters,
     updateFilters

@@ -1,21 +1,22 @@
 'use client'
 
-import BookCard from '@/components/BookCard'
+import BookItem from '@/components/BookItem'
 import BookList from '@/components/BookList'
+import BookWithControls from '@/components/BookWithControls'
 import useBooks from '@/hooks/useBooks'
-import useReadingBooks from '@/hooks/useReadingBooks'
 
 const AllBooksPage: React.FC = () => {
   const { books } = useBooks()
-  const { HandleRemoveAddReadingBook } = useReadingBooks()
 
   return (
     <BookList>
       {
         books.map(book => (
-          <li className='' onClick={() => { HandleRemoveAddReadingBook(book) }} key={book.title}>
-            <BookCard book={book}/>
-          </li>
+          <BookItem
+            key={book.title}
+          >
+            <BookWithControls book={book}/>
+          </BookItem>
         ))
       }
     </BookList>

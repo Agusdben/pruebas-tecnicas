@@ -4,6 +4,7 @@ import { getBooksFiltered } from '@/services/filter.services'
 import useFilterBooks from './useFilterBooks'
 import { ReadingBooksContext } from '@/context/ReadingBooksContext'
 import { type Book } from '@/types/book'
+import { isItemInArrayByKeyComparison } from '@/utils'
 
 const useReadingBooks = () => {
   const { readingBooks, error, loading, setReadingBooks } = useContext(ReadingBooksContext)
@@ -28,7 +29,7 @@ const useReadingBooks = () => {
   }
 
   const HandleRemoveAddReadingBook = (book: Book) => {
-    readingBooks.some(rb => rb.title === book.title)
+    isItemInArrayByKeyComparison(book, readingBooks, 'title')
       ? removeReadingBook(book)
       : addNewReadingBook(book)
   }

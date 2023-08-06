@@ -5,7 +5,7 @@ export const BOOK_FILTERS = {
 } as const
 
 export const PAGES_RANGE = {
-  all: 'all',
+  all: 'todos',
   '0-199': '0-199',
   '200-399': '200-399',
   '400-599': '400-599',
